@@ -1,9 +1,12 @@
 #!/usr/local/bin/python3
+# this was an in class assignment which replicates the linux grep program. Since there will never be a use case for this,
+# I'm not going to clean it up or comment it. Fun program to write and takes advantage of some cool python features. 
+# This project was part of our error handling studies. 
+
 import sys
 from sys import argv
 
 fileList = []
-
 lineCounter = 0
 
 try:
@@ -11,9 +14,7 @@ try:
 except IndexError:
     print("you're a dummy, not enough arguments")
     sys.exit()
-
-
-
+    
 if argv[1] == '-v':
     n = 3
 else:
@@ -30,7 +31,6 @@ def grep(n):
         except PermissionError:
             print("you don't have permission for", filename)
         fh.close()
-    #print(fileList)
 
 def outputline(n):
     lineCounter = 0
@@ -52,11 +52,3 @@ def outputline(n):
   
 grep(n)
 outputline(n)
-
-
-
-      
-   
-
-
-
