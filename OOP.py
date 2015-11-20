@@ -6,6 +6,9 @@ class Card(object):
         self.suit = suit
         self.rank = rank
 
+    def __str__(self):
+        return str(self.rank) + " " + str(self.suit)
+
 class DeckOfCards(Card):
 
     deck = []
@@ -19,12 +22,16 @@ class DeckOfCards(Card):
         for cardRank in rank:
             for cardSuit in suit:
                 newCard = Card(rank = cardRank, suit = cardSuit)
+                print(newCard)
                 self.deck.append(newCard)
 
 
     def printDeck(self):
+        """
+        :return: Prints each of the card objects in the deck
+        """
         for card in self.deck:
-            print(card.rank, card.suit)
+            print(card)
         print("printed deck of cards\n")
 
 
@@ -36,6 +43,6 @@ class DeckOfCards(Card):
         self.shuffleDeck()
         for card in range(numberOfCards):
             drawnCard = self.deck.pop()
-            print(drawnCard.rank,drawnCard.suit)
+            print(drawnCard)
         print(numberOfCards, "Shuffled Cards\n")
 
