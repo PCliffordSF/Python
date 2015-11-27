@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 # this was an in class assignment which replicates the linux grep program. Since there will never be a use case for this,
 # I'm not going to clean it up or comment it. Fun program to write and takes advantage of some cool python features. 
-# This project was part of our error handling studies. 
+# This project was part of our error handling studies.  
 
 import sys
 from sys import argv
