@@ -22,7 +22,7 @@ for line in fh:
     if line in term:
         contains.append(line)
         #print('<a href=?insane=' + line + '>' + line + '</a><br/>')
-        #print(' is contained by ' + term)
+        #print(' is contained by ' + term) 
 
 fh.close()
 
