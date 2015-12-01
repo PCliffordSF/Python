@@ -19,7 +19,7 @@ for line in fh:
 # now we have a list which contains all the usernames. 
     
 #receives the data from nameclient.py and strips and splits the wrapper
-term = cgi.FieldStorage().getvalue('name') or 'goof'
+term = cgi.FieldStorage().getvalue('key') or 'goof'
 term = term.strip().split(':')
 
 # now we have a list of the argv elements
